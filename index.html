@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            My Family Book - Vivan
+        </title>
+    </head>
+    <body style="text-align: center; background-color: greenyellow; color: blue;">
+        <h1>
+            My Family Book - Vivan
+        </h1>
+        <img id="family_member_image" src="My Family Book.jpg" style="height: 500px;">
+        <h2 id="family_member_name">
+            OP Fam Book
+        </h2>
+        <button type="button" onclick="change();">
+            Next
+        </button>
+        <script>
+            var images = ["My Family Book.jpg","MySelf.jpg","Mother.jpg","Father.jpg","GrandMother.jpg","GrandFather.jpg"];
+            var names = ["OP Fam Book","Vivan Bhargava","Aditi Bhargava","Sameeir Bhargava","Sushma Bhargava","Krishan Chand Bhargava"];
+            var count = 0;
+            function change() {
+                count ++;
+                var num_of_family_members = 5;
+                if(count > num_of_family_members ) {
+                    count = 0;
+                }
+                var updated_names = names[count];
+                var updated_images = images[count];
+                document.getElementById("family_member_image").src = updated_images;
+                document.getElementById("family_member_name").innerHTML = updated_names;
+            }
+        </script>
+    </body>
+</html>
